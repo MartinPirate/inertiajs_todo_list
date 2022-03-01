@@ -5,16 +5,22 @@
         <ul class="list-disc">
 
             <li>
-                <Link href="/" class="text-blue-500 hover:underline">Home</Link>
+                <Link href="/" class="text-blue-500 hover:underline"
+                      :class="{'font-bold underline' : $page.url === '/'}"
+                >Home
+                </Link>
             </li>
             <li>
-                <Link href="/users" class="text-blue-500 hover:underline">Users</Link>
+                <Link href="/users" class="text-blue-500 hover:underline"
+                      :class="{'font-bold underline' : $page.component === 'Users'}">Users</Link>
             </li>
             <li>
-                <Link href="/todos" class="text-blue-500 hover:underline">Todos</Link>
+                <Link href="/todos" class="text-blue-500 hover:underline"
+                      :class="{'font-bold underline' : $page.url === '/todos'}">Todos</Link>
             </li>
             <li>
-                <Link href="/settings" class="text-blue-500 hover:underline">Settings</Link>
+                <Link href="/settings" class="text-blue-500 hover:underline"
+                      :class="{'font-bold underline' : $page.url === '/settings'}">Settings</Link>
             </li>
             <li>
                 <Link href="/logout" method="post" :data="{foo : 'bar'}" as="button"
