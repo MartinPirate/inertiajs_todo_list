@@ -1,8 +1,7 @@
 <template>
-    <h1 class="text-4xl font-bold">Users</h1>
-
-
-    <Nav></Nav>
+    <Layout>
+        <h1 class="text-4xl font-bold"> Settings </h1>
+    </Layout>
 
 
     <div class="mt-96">
@@ -15,6 +14,7 @@
 <script>
 import Nav from "../shared/Nav";
 import {Link} from "@inertiajs/inertia-vue3";
+import Layout from "../shared/Layout";
 
 export default {
     name: "Users",
@@ -23,7 +23,8 @@ export default {
     },
     components: {
         Nav,
-        Link
+        Link,
+        Layout
     }
 }
 </script>

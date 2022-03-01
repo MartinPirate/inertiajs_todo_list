@@ -1,17 +1,17 @@
 <template>
-   <h1 class="text-4xl font-bold">Settings</h1>
-
-    <Nav></Nav>
-
+    <Layout>
+        <h1 class="text-4xl font-bold"> Settings </h1>
+    </Layout>
 </template>
 
 <script>
-import Nav from "../shared/Nav";
+
+import Layout from "../shared/Layout";
 
 export default {
     name: "Settings",
     components: {
-        Nav
+        Layout
     }
 }
 </script>
