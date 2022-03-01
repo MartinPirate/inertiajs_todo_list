@@ -16,6 +16,9 @@
             <li>
                 <Link href="/settings">Settings</Link>
             </li>
+            <li>
+                <Link href="/logout" method="post">Logout</Link>
+            </li>
 
 
         </ul>
@@ -28,7 +31,7 @@ import {Link} from "@inertiajs/inertia-vue3";
 
 export default {
     name: "Nav",
-    components : {
+    components: {
         Link
     }
 }
