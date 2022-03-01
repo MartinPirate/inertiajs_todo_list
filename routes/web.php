@@ -1,5 +1,6 @@
 <?php
 
+use Carbon\Carbon;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
@@ -20,7 +21,9 @@ Route::get('/', function () {
 
 
 Route::get('/users', function () {
-    return Inertia::render('Users');
+    return Inertia::render('Users', [
+        'time'=> Carbon::now()->toTimeString()
+    ]);
 });
 
 
