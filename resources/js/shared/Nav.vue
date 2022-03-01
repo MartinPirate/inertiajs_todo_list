@@ -3,24 +3,17 @@
 
     <nav class="mt-6">
         <ul class="list-disc">
-
             <li>
-                <Link href="/" class="text-blue-500 hover:underline"
-                      :class="{'font-bold underline' : $page.url === '/'}"
-                >Home
-                </Link>
+                <NavLink href="/" :active="$page.component === 'Home'">Home</NavLink>
             </li>
             <li>
-                <Link href="/users" class="text-blue-500 hover:underline"
-                      :class="{'font-bold underline' : $page.component === 'Users'}">Users</Link>
+                <NavLink href="/users" :active="$page.component === 'Users'">Users</NavLink>
             </li>
             <li>
-                <Link href="/todos" class="text-blue-500 hover:underline"
-                      :class="{'font-bold underline' : $page.url === '/todos'}">Todos</Link>
+                <NavLink href="/todos" :active="$page.url === '/todos'">Todos</NavLink>
             </li>
             <li>
-                <Link href="/settings" class="text-blue-500 hover:underline"
-                      :class="{'font-bold underline' : $page.url === '/settings'}">Settings</Link>
+                <NavLink href="/settings" :active=" $page.url === '/settings'">Settings</NavLink>
             </li>
             <li>
                 <Link href="/logout" method="post" :data="{foo : 'bar'}" as="button"
@@ -36,10 +29,12 @@
 
 <script>
 import {Link} from "@inertiajs/inertia-vue3";
+import NavLink from "./NavLink";
 
 export default {
     name: "Nav",
     components: {
+        NavLink,
         Link
     }
 }
