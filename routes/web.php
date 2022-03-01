@@ -15,8 +15,22 @@ use Inertia\Inertia;
 */
 
 Route::get('/', function () {
-    return Inertia::render('Home',
-        ['name' => "james may",
-         "frameworks" => ["laravel", "vue", "inertia"]]
-    );
+    return Inertia::render('Home');
 });
+
+
+Route::get('/users', function () {
+    return Inertia::render('Users');
+});
+
+
+Route::get('/todos', function () {
+    return Inertia::render('Todos');
+});
+
+Route::get('/settings', function () {
+    return Inertia::render('Settings');
+});
+
+
+
