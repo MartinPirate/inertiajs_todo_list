@@ -25,6 +25,7 @@ Route::get('/users', function () {
 
 
 Route::get('/todos', function () {
+    sleep(2);
     return Inertia::render('Todos');
 });
 
