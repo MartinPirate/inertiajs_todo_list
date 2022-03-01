@@ -1,17 +1,17 @@
 <template>
+    <h1>Users</h1>
 
-    <h1>Hello, Home</h1>
 
-    <Nav/>
+    <Nav></Nav>
 </template>
 
 <script>
 import Nav from "../shared/Nav";
 
 export default {
-    name: "Home",
+    name: "Users",
     components: {
-        Nav,
+        Nav
     }
 }
 </script>
